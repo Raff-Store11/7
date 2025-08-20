@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tredict Invictus Website</title>
+    <style>
+        body {
+            background-color: #0A1931;
+            color: #EEF2FF;
+            font-family: sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: #1E3A8A;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative; /* Untuk memposisikan pop-up */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #81D4FA;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #FFD700;
+            border-radius: 5px;
+            background-color: #0A1931;
+            color: #EEF2FF;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0;
+        }
+
+        .button {
+            background-color: #1E88E5;
+            color: #EEF2FF;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            flex: 1;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .status {
+            text-align: center;
+            margin-top: 20px;
+            color: #64FFDA;
+        }
+
+        .info {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8em;
+        }
+
+        .logout {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #F44336;
+            color: #EEF2FF;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .support {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: #EEF2FF;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Style untuk pop-up */
+        .popup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #1E3A8A;
+            color: #EEF2FF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .popup-content .status {
+            color: #64FFDA;
+            margin-top: 10px;
+        }
+
+        .popup-content .info {
+            margin-top: 10px;
+        }
+
+        .popup-content .time {
+            margin-top: 10px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="logout">Logout</button>
+        <div class="header">
+            <h2>Tredict Invictus Website</h2>
+        </div>
+        <input type="text" class="input-field" placeholder="Masukkan nomor target (62xxxx)">
+        <div class="button-container">
+            <button class="button" onclick="showPopup()">Crash Android</button>
+            <button class="button" onclick="showPopup()">Crash iPhone</button>
+            <button class="button" onclick="showPopup()">Delay Mention</button>
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="showPopup()">Force Close</button>
+            <button class="button" onclick="showPopup()">Invis</button>
+            <button class="button" onclick="showPopup()">Bulldozerr</button>
+        </div>
+        <div class="status">Status: Server Aktif</div>
+        <div class="info">Info: Selamat datang, Raff!!</div>
+        <div class="copyright">© Tredict Invictus</div>
+        <button class="support">Support</button>
+
+        <!-- Pop-up -->
+        <div class="popup" id="popup">
+            <div class="popup-content">
+                <h2>Tredict Invictus Website</h2>
+                <div class="status">✅ BERHASIL !!</div>
+                <div>Target: 62xxxx</div>
+                <div class="info">Info:Attack Sukses</div>
+                <div class="copyright">© Tredict Invictus</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        // Tutup pop-up saat diklik di luar pop-up
+        window.onclick = function(event) {
+            var popup = document.getElementById('popup');
+            if (event.target == popup) {
+                popup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
